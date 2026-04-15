@@ -1,5 +1,15 @@
 # Hermes Web UI -- Changelog
 
+## [v0.50.50] — 2026-04-15
+
+### Fixed
+- **Code block syntax highlighting** — Prism theme now follows the active UI theme. Light mode uses the default Prism light theme; dark mode uses `prism-tomorrow`. Theme swaps happen immediately on toggle including on first load. Adds `id="prism-theme"` to the Prism CSS link so JavaScript can locate and swap it. (Closes #505, PR #530 by @mariosam95)
+
+## [v0.50.49] — 2026-04-15
+
+### Fixed
+- **IME composition** — `isComposing` guard added to every Enter keydown handler so CJK/Japanese/Korean input method users never accidentally send mid-composition (fixes #531). Covers chat composer, command dropdown, session rename, project create/rename, app dialog, message edit, and workspace rename. Adds 3 regression tests. (PR #537 by @vansour)
+
 ## [v0.50.48] fix: toast when model is switched during active session (#419)
 
 Synthesized from PRs #516 (armorbreak001), #517 and #518 (cloudyun888).
